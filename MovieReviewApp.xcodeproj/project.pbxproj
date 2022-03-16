@@ -16,6 +16,9 @@
 		1E36829627E2AD3B0059E6DD /* MovieReviewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36829527E2AD3B0059E6DD /* MovieReviewAppTests.swift */; };
 		1E3682A027E2AD3B0059E6DD /* MovieReviewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E36829F27E2AD3B0059E6DD /* MovieReviewAppUITests.swift */; };
 		1E3682A227E2AD3B0059E6DD /* MovieReviewAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3682A127E2AD3B0059E6DD /* MovieReviewAppUITestsLaunchTests.swift */; };
+		1E3682B027E2AE150059E6DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3682AF27E2AE150059E6DD /* SnapKit */; };
+		1E3682B327E2AE220059E6DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3682B227E2AE220059E6DD /* Alamofire */; };
+		1E3682B627E2AE2E0059E6DD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3682B527E2AE2E0059E6DD /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3682B627E2AE2E0059E6DD /* Kingfisher in Frameworks */,
+				1E3682B027E2AE150059E6DD /* SnapKit in Frameworks */,
+				1E3682B327E2AE220059E6DD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = MovieReviewApp;
+			packageProductDependencies = (
+				1E3682AF27E2AE150059E6DD /* SnapKit */,
+				1E3682B227E2AE220059E6DD /* Alamofire */,
+				1E3682B527E2AE2E0059E6DD /* Kingfisher */,
+			);
 			productName = MovieReviewApp;
 			productReference = 1E36827B27E2AD390059E6DD /* MovieReviewApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,11 @@
 				Base,
 			);
 			mainGroup = 1E36827227E2AD390059E6DD;
+			packageReferences = (
+				1E3682AE27E2AE150059E6DD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1E3682B127E2AE220059E6DD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1E3682B427E2AE2E0059E6DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 1E36827C27E2AD390059E6DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -604,6 +620,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E3682AE27E2AE150059E6DD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		1E3682B127E2AE220059E6DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		1E3682B427E2AE2E0059E6DD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E3682AF27E2AE150059E6DD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3682AE27E2AE150059E6DD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1E3682B227E2AE220059E6DD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3682B127E2AE220059E6DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1E3682B527E2AE2E0059E6DD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E3682B427E2AE2E0059E6DD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E36827327E2AD390059E6DD /* Project object */;
 }
