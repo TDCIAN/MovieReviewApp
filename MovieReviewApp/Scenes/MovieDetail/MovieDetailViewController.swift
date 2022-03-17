@@ -11,6 +11,12 @@ import Kingfisher
 
 final class MovieDetailViewController: UIViewController {
     private var presenter: MovieDetailPresenter!
+    
+    private lazy var rightBarButtonItem = UIBarButtonItem(
+        image: nil,
+        style: .plain,
+        target: self,
+        action: #selector(didTapRightBarButton))
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -44,6 +50,7 @@ extension MovieDetailViewController: MovieDetailProtocol {
     func setViews(with movie: Movie) {
         view.backgroundColor = .systemBackground
         navigationItem.title = movie.title
+        navigationItem.rightBarButtonItem = rightBarButtonItem
         
         let userRatingContentsStackView =
         MovieContentsStackView(
@@ -102,7 +109,16 @@ extension MovieDetailViewController: MovieDetailProtocol {
         if let imageURL = movie.imageURL {
             imageView.kf.setImage(with: imageURL)
         }
-        
-        
+    }
+    
+    func setRightBarButton(with isLiked: Bool) {
+        let imageName = isLiked ? "star.fill" : "star"
+        rightBarButtonItem.image = UIImage(systemName: imageName)
+    }
+}
+
+private extension MovieDetailViewController {
+    @objc private func didTapRightBarButton() {
+        presenter.didTapRightbarButtonItem()
     }
 }
